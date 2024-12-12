@@ -9,4 +9,5 @@ export * from './query-client';
 export * from './constants';
 export * from './translation.util';
 export * from './text.util';
+export * from './assets.util';
 // export * from './icon.util';

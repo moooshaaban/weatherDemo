@@ -18,4 +18,8 @@ buildscript {
     }
 }
 
+project.ext {
+    excludeAppGlideModule = true
+}
+
 apply plugin: "com.facebook.react.rootproject"

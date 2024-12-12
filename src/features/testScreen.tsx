@@ -8,7 +8,7 @@ import {
 } from '@core/navigation/types.navigation';
 import { langConfig } from '@core/translations';
 import { useLangIsAr } from '@core/slices/lang.slice';
-import { AppText, GapH64 } from '@core/common';
+import { AppContainer, AppText, GapH64 } from '@core/common';
 
 export const TestScreen: FC<RootStackParamList['testScreen']> = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ export const TestScreen: FC<RootStackParamList['testScreen']> = () => {
   const navigation = useAppNavigation();
 
   return (
-    <View>
+    <AppContainer>
       <GapH64 />
       <AppText title={'not_found_error'} variant='primary' weight='900' styleMode='italic' size={16} />
       <AppText title={'not_found_error'} variant='primary' weight='900' size={16} />
@@ -30,6 +30,6 @@ export const TestScreen: FC<RootStackParamList['testScreen']> = () => {
       />
       {/* <GapH16 /> */}
       {/* <AppText title={'welcomeMessage'} style={{fontWeight: '800'}} /> */}
-    </View>
+    </AppContainer>
   );
 };
