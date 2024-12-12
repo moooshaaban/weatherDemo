@@ -7,4 +7,6 @@ export * from './style.util';
 export * from './responsive.utils';
 export * from './query-client';
 export * from './constants';
+export * from './translation.util';
+export * from './text.util';
 // export * from './icon.util';

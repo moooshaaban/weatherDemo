@@ -5,6 +5,8 @@ import {
   DARK_COLORS,
   DARK_FONTS_EN,
   LIGHT_FONTS_EN,
+  DARK_FONTS_EN_Italic,
+  LIGHT_FONTS_EN_Italic,
 } from '@core/themes';
 import { RootStore } from '@core/store';
 import { Lang } from '@core/utils';
@@ -18,6 +20,7 @@ export interface StatsBarState {
 interface ThemeState {
   colors: typeof LIGHT_COLORS | typeof DARK_COLORS;
   fonts: typeof LIGHT_FONTS_EN | typeof DARK_FONTS_EN;
+  italicFonts: typeof LIGHT_FONTS_EN_Italic | typeof DARK_FONTS_EN_Italic;
   systemMode?: 'dark' | 'light' | undefined | 'no-preference';
   statusBar: StatsBarState;
 }
@@ -29,6 +32,7 @@ interface SystemModeChangePayload {
 const initialState: ThemeState = {
   colors: LIGHT_COLORS,
   fonts: LIGHT_FONTS_EN,
+  italicFonts: LIGHT_FONTS_EN_Italic,
   systemMode: 'light',
   statusBar: {
     statusBarBackgroundColor: 'transparent',
@@ -48,11 +52,13 @@ const themeSlice = createSlice({
     ) {
       if (systemMode == 'dark') {
         state.colors = DARK_COLORS;
-        state.fonts = DARK_FONTS_EN;
+        state.fonts = LIGHT_FONTS_EN;
+        state.italicFonts = DARK_FONTS_EN_Italic;
         state.systemMode = systemMode;
       } else {
         state.colors = LIGHT_COLORS;
         state.fonts = LIGHT_FONTS_EN;
+        state.italicFonts = LIGHT_FONTS_EN_Italic;
         state.systemMode = systemMode;
       }
     },
@@ -82,8 +88,9 @@ export const useColors = () => {
 };
 
 export const useFonts = () => {
-  const font = useSelector((state: RootStore) => state.theme.fonts);
-  return font;
+  const fonts = useSelector((state: RootStore) => state.theme.fonts);
+  const italicFonts = useSelector((state: RootStore) => state.theme.italicFonts);
+  return { fonts, italicFonts };
 };
 
 export const useStatusBarSelector = () => {

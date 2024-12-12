@@ -32,6 +32,9 @@ export const useCurrentLangSelector = () =>
 export const useLangIsAr = () =>
   useSelector((state: RootState) => state.lang.lang == Lang.ar);
 
+export const useDirection = () =>
+  useSelector((state: RootState) => state.lang.direction);
+
 
 export default langSlice.reducer;
 export const { changeLanguage } = langSlice.actions;

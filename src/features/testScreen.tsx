@@ -8,7 +8,7 @@ import {
 } from '@core/navigation/types.navigation';
 import { langConfig } from '@core/translations';
 import { useLangIsAr } from '@core/slices/lang.slice';
-import { GapH64 } from '@core/common';
+import { AppText, GapH64 } from '@core/common';
 
 export const TestScreen: FC<RootStackParamList['testScreen']> = () => {
   const dispatch = useDispatch();
@@ -18,6 +18,9 @@ export const TestScreen: FC<RootStackParamList['testScreen']> = () => {
   return (
     <View>
       <GapH64 />
+      <AppText title={'not_found_error'} variant='primary' weight='900' styleMode='italic' size={16} />
+      <AppText title={'not_found_error'} variant='primary' weight='900' size={16} />
+
       <Button
         title="isAr"
         onPress={() => {
