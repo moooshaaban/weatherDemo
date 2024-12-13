@@ -9,12 +9,13 @@ import { PersistConfig, persistReducer } from 'redux-persist';
 import {
   LangReducer,
   ThemeReducer,
+  CitiesReducer
 } from '@core/slices';
 
 const reducers = combineReducers({
   lang: LangReducer,
   theme: ThemeReducer,
-  // cities: CitiesReducer,
+  cities: CitiesReducer,
 });
 
 export type RootState = ReturnType<typeof reducers>;

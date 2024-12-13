@@ -4,4 +4,7 @@ export const DARK_COLORS = {
   background: '#FFFFFF',
   backgroundSecondary: '#D6D3DE',
   TextTitle: '#000814',
+  white: "#FFFFFF",
+  textColor: '#000000',
+  textSecondary: '#3D4548',
 };

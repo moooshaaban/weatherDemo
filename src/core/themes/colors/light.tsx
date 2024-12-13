@@ -4,4 +4,7 @@ export const LIGHT_COLORS = {
   background: '#FFFFFF',
   backgroundSecondary: '#D6D3DE',
   TextTitle: '#000814',
+  textColor: '#000000',
+  white: "#FFFFFF",
+  textSecondary: '#3D4548',
 };

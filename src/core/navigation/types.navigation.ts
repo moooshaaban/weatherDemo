@@ -5,7 +5,7 @@ import {
   StackActionHelpers,
   useNavigation,
 } from '@react-navigation/native';
-import { TestScreen } from '@features/index';
+import { homeScreens, HomeStackParamList, TestScreen } from '@features/index';
 
 
 
@@ -17,11 +17,13 @@ export interface Screen<T extends ParamListBase> {
 export type RootStackParamList = {
   testScreen: undefined;
   testScreen1: { props: any };
-}
+} & HomeStackParamList
 
 export const screens: Screen<RootStackParamList>[] = [
   { name: 'testScreen', component: TestScreen },
   { name: 'testScreen1', component: TestScreen },
+  ...homeScreens
+
 ];
 export type RouteName = keyof RootStackParamList;
 

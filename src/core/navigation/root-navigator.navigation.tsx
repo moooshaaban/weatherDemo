@@ -34,7 +34,7 @@ export const RootNavigator: FC = () => {
   return (
     <Fragment>
       <Stack.Navigator
-        initialRouteName={'testScreen'}
+        initialRouteName={'homeScreen'}
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: background },
