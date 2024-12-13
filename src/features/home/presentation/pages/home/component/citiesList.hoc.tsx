@@ -1,7 +1,7 @@
 import { useAppNavigation } from "@src/core/navigation";
 import { useCities } from "@src/core/slices"
 import React from "react"
-import { Alert, FlatList } from "react-native";
+import { FlatList } from "react-native";
 import { ListItem } from "./listItem";
 import { AppImage } from "@src/core/common";
 import { AppAssets } from "@src/core/utils";
@@ -18,11 +18,7 @@ export const CitiesListHOC: React.FC = () => {
             renderItem={({ index, item }) =>
                 <ListItem
                     onPress={() => {
-                        Alert.alert("cityDetailsScreen")
-                        // navigation?.navigate('cityDetailsScreen', {
-                        //     cityName: item?.cityName,
-                        //     title: `${item.cityName}, ${item.countryCode}`,
-                        // });
+                        navigation?.navigate('cityDetailsScreen', item);
                     }}
                     cityName={item?.cityName}
                     title={`${item.cityName}, ${item.countryCode}`}
