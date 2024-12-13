@@ -26,9 +26,10 @@ export const ListItem: FC<Props> = ({
   const styles = useMemo(() => style(colors), [colors]);
 
   const onPressInfo = () => {
-    Alert.alert("onPressInfo")
-    // navigation.navigate('historicalScreen', { cityName });
+    navigation.navigate('cityHistoryScreen', { cityName });
   };
+
+
   const onPressDelete = () => {
     dispatch(removeCity({ cityName }));
 

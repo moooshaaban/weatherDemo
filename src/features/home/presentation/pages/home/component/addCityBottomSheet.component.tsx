@@ -1,10 +1,10 @@
 import { BottomSheetFlatList } from "@gorhom/bottom-sheet";
-import { AppBottomSheet, AppText, SearchInputBottomSheet } from "@src/core/common";
+import { AppBottomSheet, AppSpinner, AppText, SearchInputBottomSheet } from "@src/core/common";
 import { useCitiesByName } from "@src/features/home/useCases";
 import React, { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 import { ListItem } from "./listItem";
-import { Alert } from "react-native";
+import { Alert, View } from "react-native";
 import { addCity, useCities } from "@src/core/slices";
 import { Weather } from "@src/core/models";
 import { useDispatch } from "react-redux";
@@ -48,7 +48,9 @@ export const AddCityBottomSheet: React.FC<Props> = ({ isOpenBottomSheet, onClose
                 {...{ searchValue, setSearchValue: debounceSearch }}
             />
             {isLoading && searchValue ? (
-                <AppText value="loading...." />
+                <View>
+                    <AppSpinner />
+                </View>
             ) : (
                 <BottomSheetFlatList
                     data={data ? [data] : []}

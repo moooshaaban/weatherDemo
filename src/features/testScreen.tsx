@@ -24,7 +24,6 @@ export const TestScreen: FC<RootStackParamList['testScreen']> = () => {
       <Button
         title="isAr"
         onPress={() => {
-          Alert.alert("test")
           langConfig(isAr ? Lang.en : Lang.ar);
         }}
       />

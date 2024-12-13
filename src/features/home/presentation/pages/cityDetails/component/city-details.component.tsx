@@ -17,9 +17,9 @@ interface Props {
 export const CityDetailsComponent: React.FC<Props> = ({ city, isLoading, weather }) => {
 
     const icon = getWeatherImage({ icon: weather?.weather?.[0]?.icon as string })
-    const temp = getTempCelsiusFromKelvin({ kelvin: (weather?.main?.temp as number) - 273.15 })
+    const temp = getTempCelsiusFromKelvin({ kelvin: weather?.main?.temp as number })
     const WindSpeed = ((weather?.wind?.speed as number) * 3.6).toFixed(1) + ' km/h';
-    const date = dayjs(weather?.dt as number).format('DD.MM.YYYY - HH:mm');
+    const date = dayjs.unix(weather?.dt as number).add(1, 'minute').format('DD.MM.YYYY - HH:mm');
     const colors = useColors();
     const styles = useMemo(() => style(colors), [colors]);
 

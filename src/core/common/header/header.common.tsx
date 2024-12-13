@@ -9,7 +9,7 @@ import { AppImage } from '@core/common';
 import { AppAssets, TranslatorText } from '@src/core/utils';
 
 interface Props {
-  title?: TranslatorText;
+  title?: TranslatorText
   hideBack?: boolean;
 }
 
