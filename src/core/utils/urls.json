@@ -1,5 +1,4 @@
 {
-  "API_ENDPOINT_Weather": "https://api.openweathermap.org"
+  "API_ENDPOINT_Weather": "https://api.openweathermap.org",
+  "API_KEY": "f5cb0b965ea1564c50c6f1b74534d823"
 }
-
-  

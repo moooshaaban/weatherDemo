@@ -7,3 +7,4 @@ export * from './header/header.common';
 export * from './button/button.common';
 export * from './bottomSheet';
 export * from './searchInputBottomSheet';
+export * from './loading/loading';

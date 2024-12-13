@@ -1,25 +1,6 @@
 import { isAndroid } from '@core/utils';
 
-/* prettier-ignore */ // This line of code disables Prettier formatting for the next lines of code
 export const LIGHT_FONTS_EN = {
-  // 'Thin': isAndroid ? 'Roboto-Thin' : 'Roboto Thin',
-  // 'Thin-Italic': isAndroid ? 'Roboto-ThinItalic' : 'Roboto Thin Italic',
-
-  // 'Light': isAndroid ? 'Roboto-Light' : 'Roboto Light',
-  // 'Light-Italic': isAndroid ? 'Roboto-LightItalic' : 'Roboto Light Italic',
-
-  // 'Regular': isAndroid ? 'Roboto-Regular' : 'Roboto',
-  // 'Regular-Italic': isAndroid ? 'Roboto-Italic' : 'Roboto Italic',
-
-  // 'Medium': isAndroid ? 'Roboto-Medium' : 'Roboto Medium',
-  // 'Medium-Italic': isAndroid ? 'Roboto-MediumItalic' : 'Roboto Medium Italic',
-
-  // 'Bold': isAndroid ? 'Roboto-Bold' : 'Roboto Bold',
-  // 'Bold-Italic': isAndroid ? 'Roboto-BoldItalic' : 'Roboto Bold Italic',
-
-  // 'Black': isAndroid ? 'Roboto-Black' : 'Roboto Black',
-  // 'Black-Italic': isAndroid ? 'Roboto-BlackItalic' : 'Roboto Black Italic',
-
   '100': isAndroid ? 'Roboto-Thin' : 'Roboto Thin',
   '200': isAndroid ? 'Roboto-Thin' : 'Roboto Thin',
   '300': isAndroid ? 'Roboto-Light' : 'Roboto Light',

@@ -1,9 +1,10 @@
 import { useCustomQuery } from "@src/core/hooks"
 import { Weather } from "@src/core/models"
+import urls from '@core/utils/urls.json';
 
 export const useCitiesByName = ({ searchValue }: { searchValue: string }) => {
     return useCustomQuery<Weather>({
-        url: `/data/2.5/weather?q=${searchValue}&apikey=f5cb0b965ea1564c50c6f1b74534d823`,
+        url: `/data/2.5/weather?q=${searchValue}&apikey=${urls.API_KEY}`,
         dependedParam: searchValue,
         options: {
             cacheTime: 0,
