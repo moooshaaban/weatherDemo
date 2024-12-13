@@ -7,4 +7,5 @@ export const LIGHT_COLORS = {
   textColor: '#000000',
   white: "#FFFFFF",
   textSecondary: '#3D4548',
+  borderColor: '#E9E9E9',
 };

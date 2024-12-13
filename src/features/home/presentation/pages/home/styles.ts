@@ -5,14 +5,16 @@ export const style = (colors: Colors) =>
   StyleSheet.create({
     container: {
       flex: 1,
-      alignSelf: "stretch"
+      alignSelf: "stretch",
+      padding: width(16)
     },
     flex: {
       flex: 1,
-      padding: width(16)
+
     },
     button: {
-      alignSelf: "flex-end"
+      alignSelf: "flex-end",
+      margin: width(16)
     }
 
   });

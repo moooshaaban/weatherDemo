@@ -7,4 +7,5 @@ export const DARK_COLORS = {
   white: "#FFFFFF",
   textColor: '#000000',
   textSecondary: '#3D4548',
+  borderColor: '#E9E9E9',
 };
