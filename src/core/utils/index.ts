@@ -13,5 +13,5 @@ export * from './translation.util';
 export * from './text.util';
 export * from './assets.util';
 export * from './helper.utils';
-// export * from './icon.util';
+export * from './icon.util';
 

@@ -2,8 +2,9 @@ import { TouchableOpacity, TouchableOpacityProps, View } from 'react-native';
 import React, { FC, useMemo } from 'react';
 import { style as innerStyle } from './style';
 import { AppText } from '@core/common';
-import { TranslatorText } from '@core/utils';
+import { IconType, TranslatorText, width } from '@core/utils';
 import { useColors } from '@src/core/slices';
+import { AppIcon } from '../icon/Icon';
 
 interface CustomButtonProps extends TouchableOpacityProps {
     title: TranslatorText
@@ -20,12 +21,12 @@ export const AppButton: FC<CustomButtonProps> = ({ onPress, title, style, ...res
             style={[styles.floatingButton, style]}
             {...{ ...rest }}
         >
-            {/* <AppIcon
-        type={IconType.entypo}
-        name="plus"
-        color={colors.white}
-        size={width(20)}
-      /> */}
+            <AppIcon
+                type={IconType.entypo}
+                name="plus"
+                color={colors.white}
+                size={width(20)}
+            />
 
             <View style={styles.space} />
 
