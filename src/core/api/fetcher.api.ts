@@ -19,14 +19,11 @@ export async function fetcher<T>(
   headers?: AxiosRequestHeaders,
 ): Promise<T> {
   try {
-    // Perform a GET request to the specified URL with optional headers.
+
     const response = await axios.get<T>(url, { headers });
 
-    // Return the response data.
     return response.data;
   } catch (error) {
-    // console.log('error ::: ', JSON.stringify((error as any)?.response?.data));
-    // Map and throw the error using the mapAxiosError utility.
     throw mapAxiosError(error as AxiosError);
   }
 }
