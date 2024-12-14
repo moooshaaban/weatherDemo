@@ -65,13 +65,7 @@ export const AddCityBottomSheet: React.FC<Props> = ({ isOpenBottomSheet, onClose
                                 title={`${item.name}, ${item.sys.country}`}
                                 cityName={item.name}
                                 key={index?.toString()}
-                            // allowDelete={
-                            //     !!cities?.find(city => city.cityName == item?.name)
-                            //         ?.cityName
-                            // }
-                            // showAdd={
-                            //     !cities?.find(city => city.cityName == item?.name)?.cityName
-                            // }
+                                allowDelete={false}
                             />
                         ) : (
                             <></>

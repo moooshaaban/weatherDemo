@@ -22,6 +22,7 @@ export const CitiesListHOC: React.FC = () => {
                     cityName={item?.cityName}
                     title={`${item.cityName}, ${item.countryCode}`}
                     key={index?.toString()}
+                    allowDelete={true}
                 />
             }
             ListEmptyComponent={<ListEmptyComponent />}

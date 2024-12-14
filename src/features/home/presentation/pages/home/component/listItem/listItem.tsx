@@ -13,12 +13,14 @@ interface Props {
   onPress: () => void;
   title: string;
   cityName: string;
+  allowDelete: boolean
 }
 
 export const ListItem: FC<Props> = ({
   onPress,
   title,
   cityName,
+  allowDelete
 }) => {
   const dispatch = useDispatch();
   const colors = useColors();
@@ -47,12 +49,12 @@ export const ListItem: FC<Props> = ({
         </View>
 
         <View style={styles.row}>
-          <>
+          {allowDelete ? <>
             <TouchableOpacity activeOpacity={0.7} onPress={onPressDelete}>
               <AppIcon name={'delete'} size={width(18)} />
             </TouchableOpacity>
             <View style={{ width: 8 }} />
-          </>
+          </> : <></>}
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={onPressInfo}

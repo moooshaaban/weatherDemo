@@ -176,8 +176,8 @@ const RNBottomSheet = (
             enablePanDownToClose
             topInset={insets.top + height(50)}
             animateOnMount
-            keyboardBehavior="interactive"
-            keyboardBlurBehavior="restore"
+            // keyboardBehavior="interactive"
+            // keyboardBlurBehavior="restore"
             ref={bottomSheetRef}
             index={indexSnapping}
             snapPoints={snapPoints}

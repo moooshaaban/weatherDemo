@@ -15,6 +15,7 @@ import { langConfig } from '@core/translations';
 
 dayjs.extend(relativeTime);
 dayjs.extend(duration);
+console.warn = () => { }
 
 function App(): JSX.Element {
   useEffect(() => {
