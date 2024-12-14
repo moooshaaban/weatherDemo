@@ -9,6 +9,18 @@ import { Row } from '../row';
 import { useCurrentLangSelector, useDirection } from '@src/core/slices';
 import { translate } from '@src/core/utils/translation.util';
 
+
+/**
+ * Image Component
+ * 
+ * This component handles text rendering in multiple ways and manages 
+ * fonts dynamically. It also leverages the default text props 
+ * from React Native. For instance, I noticed the availability of 
+ * italic fonts in some files, and I’ve implemented a solution that 
+ * automatically recognizes and retrieves the correct font if the client 
+ * requests an italic style via the fontStyle prop.
+ * 
+ */
 export const AppText: FC<CustomTextProps> = props => {
   const {
     children,

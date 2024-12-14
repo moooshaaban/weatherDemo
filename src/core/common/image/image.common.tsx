@@ -1,14 +1,18 @@
 import React from 'react';
 import FastImage, { FastImageProps, ImageStyle } from 'react-native-fast-image';
-import {
-  Easing,
-  useSharedValue,
-  withTiming,
-} from 'react-native-reanimated';
-
 import { DimensionValue, Image, StyleProp, View } from 'react-native';
 import { useStyle } from '@core/hooks';
 import { appAssets, AssetsType } from '@core/utils';
+
+
+/**
+ * Image Component
+ * 
+ *This component is designed to handle image rendering with the added
+  benefit of auto-completion support. This feature minimizes errors during
+   development and significantly accelerates the coding process."
+ * 
+ */
 interface Props extends FastImageProps {
   blurHash?: string;
   assets?: AssetsType;
@@ -28,7 +32,6 @@ export const AppImage: React.FC<Props> = props => {
     assets,
     ...rest
   } = props;
-  const fadeAnim = useSharedValue(1);
   const containerStyle = useStyle<StyleProp<ImageStyle>>(() => {
     return {
       width: width || 70,
@@ -36,13 +39,6 @@ export const AppImage: React.FC<Props> = props => {
       borderRadius,
     };
   }, [width, borderRadius, height]);
-  const fadeOut = () => {
-    fadeAnim.value = withTiming(0, {
-      duration: 500,
-      easing: Easing.cubic,
-    });
-  };
-
 
   const TempNode = (
     typeof source == 'number' ? Image : FastImage
@@ -51,7 +47,6 @@ export const AppImage: React.FC<Props> = props => {
     <View>
       <TempNode
         source={assets ? appAssets[assets] : source}
-        onLoadEnd={fadeOut}
         style={[containerStyle, style]}
         {...rest}
       />
