@@ -6,9 +6,9 @@ import { style } from "../home/styles";
 import { useColors } from "@src/core/slices"
 
 export const HomeHOC: React.FC = () => {
-
     const colors = useColors();
     const styles = useMemo(() => style(colors), [colors]);
+
     const [isOpenBottomSheet, setOpenBottomSheet] = useState(false)
     const onClose = () => {
         setOpenBottomSheet(false)

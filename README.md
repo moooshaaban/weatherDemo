@@ -69,12 +69,16 @@ You've successfully run and modified your React Native App. :partying_face:
 
 3. **Custom Fonts**:
    - Implemented custom fonts to enhance the UI/UX of the application.
+   - use specific code in `text.tsx` to handle italic font  with in fontStyle props in use `AppText` component
+
 
 4. **Reusable Components**:
    - Developed common components to improve code reusability and maintainability.
+   - try to make things modular so they can be reused in multiple places, whether as a component or a helper function
 
 5. **File Structure**:
    - Set up a well-organized file structure to facilitate efficient development and scaling.
+   - Designed by me to enhance the coding cycle, this structure provides encapsulation features within its components and ensures efficient handling. 
 
 ### Node.js Version Requirement
 
