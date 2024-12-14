@@ -16,6 +16,7 @@ interface Props {
 
 export const CityDetailsComponent: React.FC<Props> = ({ city, isLoading, weather }) => {
 
+    // make getWeatherImage and  getTempCelsiusFromKelvin in helper util file to enhance reusability 
     const icon = getWeatherImage({ icon: weather?.weather?.[0]?.icon as string })
     const temp = getTempCelsiusFromKelvin({ kelvin: weather?.main?.temp as number })
     const WindSpeed = ((weather?.wind?.speed as number) * 3.6).toFixed(1) + ' km/h';
