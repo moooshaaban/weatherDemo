@@ -35,6 +35,7 @@ const citiesSlice = createSlice({
         },
         addCityWeatherHistory(state,
             { payload }: PayloadAction<{ cityName: string; history: Weather[] }>) {
+            //use array helper  to handle those cases 
             //initial
             if (!state.history) {
                 state.history = [payload]
