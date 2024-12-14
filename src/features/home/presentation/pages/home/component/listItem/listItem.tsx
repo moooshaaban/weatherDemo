@@ -1,9 +1,9 @@
-import { Alert, TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 import React, { FC, useMemo } from 'react';
 import { useColors } from '@core/slices/theme.slice';
 import { style } from './style';
-import { AppImage, AppText } from '@core/common';
-import { AppAssets } from '@core/utils';
+import { AppImage, AppText, AppIcon } from '@core/common';
+import { AppAssets, width } from '@core/utils';
 import { useAppNavigation } from '@core/navigation';
 import { useDispatch } from 'react-redux';
 import Animated, { FadeInUp, FadeOutUp } from 'react-native-reanimated';
@@ -32,8 +32,6 @@ export const ListItem: FC<Props> = ({
 
   const onPressDelete = () => {
     dispatch(removeCity({ cityName }));
-
-    // remove history too here
   };
 
   return (
@@ -49,21 +47,12 @@ export const ListItem: FC<Props> = ({
         </View>
 
         <View style={styles.row}>
-
-          {/* {showAdd ? (
-            <>
-              <TouchableOpacity activeOpacity={0.7} onPress={onPressDelete}>
-                <AppIcon
-                  type={IconType.entypo}
-                  name={'add-to-list'}
-                  size={width(20)}
-                />
-              </TouchableOpacity>
-              <View style={{ width: 8 }} />
-            </>
-          ) : (
-            <></>
-          )} */}
+          <>
+            <TouchableOpacity activeOpacity={0.7} onPress={onPressDelete}>
+              <AppIcon name={'delete'} size={width(18)} />
+            </TouchableOpacity>
+            <View style={{ width: 8 }} />
+          </>
           <TouchableOpacity
             activeOpacity={0.7}
             onPress={onPressInfo}

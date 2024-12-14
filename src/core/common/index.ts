@@ -8,3 +8,4 @@ export * from './button/button.common';
 export * from './bottomSheet';
 export * from './searchInputBottomSheet';
 export * from './loading/loading';
+export * from './icon/Icon';
