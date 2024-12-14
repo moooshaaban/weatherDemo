@@ -32,15 +32,6 @@ npm run android
 yarn android
 ```
 
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
 
 If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
 
@@ -64,16 +55,49 @@ You've successfully run and modified your React Native App. :partying_face:
 - If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
 - If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
 
-# Troubleshooting
+### Project Setup and Features
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+1. **Project Initialization**:
+   - Initialized the project using the latest stable version of React Native.
 
-# Learn More
+2. **Library Implementations**:
+   - Integrated essential libraries such as:
+     - `react-native-vector-icons` for scalable icons.
+     - `react-native-reanimated` for enhanced animations.
+     - `react-navigation` for managing app navigation.
+     - And other useful libraries.
 
-To learn more about React Native, take a look at the following resources:
+3. **Custom Fonts**:
+   - Implemented custom fonts to enhance the UI/UX of the application.
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+4. **Reusable Components**:
+   - Developed common components to improve code reusability and maintainability.
+
+5. **File Structure**:
+   - Set up a well-organized file structure to facilitate efficient development and scaling.
+
+### Node.js Version Requirement
+
+> **Important**: This project requires Node.js version 18.18.0 or higher. Please ensure you have the correct version installed. You can manage Node.js versions using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm).
+
+#### Using nvm to Install Node.js
+
+1. **Install nvm**: Follow the installation instructions on the [nvm GitHub page](https://github.com/nvm-sh/nvm).
+
+2. **Install Node.js 18.18.0 or higher**:
+
+   ```bash
+   nvm install 18
+   ```
+
+3. **Switch to the installed version**:
+
+   ```bash
+   nvm use 18
+   ```
+
+4. **Verify the version**:
+
+   ```bash
+   node -v
+   ```
