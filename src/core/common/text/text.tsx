@@ -46,20 +46,18 @@ export const AppText: FC<CustomTextProps> = props => {
   const fontWeight = comingStyle?.fontWeight;
 
   const fontStyleProps = comingStyle?.fontStyle;
-  // to choose selected font weight and detect the type of compatible font
+  //handle italic font dynamic  
   const fontsList = [fontStyleProps, styleMode]?.includes("italic") ? italicFonts : fonts
   const fontFamily = fontsList[fontWeight || weight || '400'];
   const textAlign = useMemo(
     () => (lang == Lang.en ? TextAlign.LEFT : TextAlign.RIGHT),
     [lang],
   );
-  // the default font size is 16
   const fontSizeResponsive = comingStyle?.fontSize
     ? fontSize(comingStyle?.fontSize as unknown as number)
     : size
       ? fontSize(size)
       : fontSize(16);
-  //custom inline style depend on current language
   const textStyle = useStyle<TextStyle>(() => {
     return {
       writingDirection,
@@ -75,7 +73,6 @@ export const AppText: FC<CustomTextProps> = props => {
       },
     ];
   }, [variant]);
-  //custom inline style depend on current language and font style
   const fontStyle = useStyle<TextStyle>(() => {
     return { fontFamily, fontWeight: undefined };
   }, [lang, fontWeight, weight, fonts]);
