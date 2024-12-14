@@ -12,6 +12,14 @@ import { style } from './styles';
 
 interface Props extends Pick<ViewProps, 'children'> { }
 
+
+
+/**
+ * AppContainer Component
+ * 
+ * this component provide screen container contain @wafe_Image in button to be reused   
+ * 
+ */
 export const AppContainer: FC<Props> = ({ children }) => {
     const colors = useColors();
     const styles = useMemo(() => style(colors), [colors]);

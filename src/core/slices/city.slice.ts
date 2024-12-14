@@ -1,9 +1,15 @@
 import { City, Weather } from "@core/models";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { State } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import { RootStore } from "../store";
 
+
+/**
+ * City Reducer 
+ * 
+ * handle add and remove city and city history locally 
+ * 
+ */
 
 interface CitiesSlice {
     cities: City[];
